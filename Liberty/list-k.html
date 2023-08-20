@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<title>Банк "Свобода"</title>
+<script src="js/mefunc.js"></script>
+</head>
+<body>
+<table width="85%" align="center">
+	<tr>
+		<td width="23%" align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo1" src="img/Лого5.png" /><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td width="16%"><div id="cred" class="mnu" style="color:yellow" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td width="23%" align="center"><div id="vklad" class="mnu" onclick="MnuClick(this)">Вклады</div></td>
+		<td width="23%" align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td width="15%"align="right" valign="top">
+			<div id="geo" onclick="MnuClick(this)"><img id="geob" src="img/geo-b.png" /><img id="geoy" src="img/geo-y.png"  /></div>
+		</td>
+	</tr>
+	<tr><td colspan="5" class="rek" style="color:yellow; font-size:38pt;" align="center">Предложения по кредитам</td></tr>
+	<tr><td  colspan="5">
+		<table id="opis" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>Наименование кредита</th>
+				<th>Сумма кредита</th>
+				<th>Срок кредита</th>
+				<th>Валюта кредита</th>
+				<th width="100">Cтавка</th>
+				<th>Описание</th>
+			</tr>
+			<tr id="lc" onmouseover="pPsvet(this)">
+				<td>Любые цели</td>
+				<td>до <span class="cifra">5</span> млн.</td>
+				<td>до <span class="cifra">10</span> лет</td>
+				<td>рубли, доллары США</td>
+				<td><span class="cifra">1</span>-ый год: <span class="cifra">8,10&nbsp;%</span>, далее - <span class="cifra">20,80&nbsp;%</span></td>
+				<td align="justify"><p>Необходимо предоставление справок о доходах.</p>
+					<p>Учитываются все подтверждённые доходы.</p>
+				</td>
+			</tr>
+			<tr id="rf" onmouseover="pPsvet(this)">
+				<td>Рефинансирование</td>
+				<td>до <span class="cifra">5</span> млн.</td>
+				<td>до <span class="cifra">5</span> лет</td>
+				<td>рубли, доллары США</td>
+				<td><span class="cifra">1</span>-ый год: <span class="cifra">5,50&nbsp;%</span>, далее - <span class="cifra">10,20&nbsp;%</span></td>
+				<td align="justify"><p>Необходимо предоставление документов по существующему кредиту, а также справок о доходах.</p>
+					<p>Учитываются все подтверждённые доходы.</p>
+				</td>
+			</tr>
+			<tr id="zp" onmouseover="pPsvet(this)">
+				<td>Зарплатник</td>
+				<td>до <span class="cifra">5</span> млн.</td>
+				<td>до <span class="cifra">5</span> лет</td>
+				<td>рубли, доллары США</td>
+				<td>до <span class="cifra">5,45&nbsp;%</span></td>
+				<td align="justify"><p>Процентная ставка зависит от срока кредита, наличия страховых программ и категории компании, в который вы работаете, но в любом случае не превышает <span class="cifra">5,45&nbsp;%</span>.</p>
+					<p>Документы не требуются.</p>
+				</td>
+			</tr>
+			<tr id="pd" onmouseover="pPsvet(this)">
+				<td>Поддержка</td>
+				<td>до <span class="cifra">500&nbsp;000</span>&nbsp;руб.</td>
+				<td>до <span class="cifra">5</span>&nbsp;лет</td>
+				<td>рубли</td>
+				<td><span class="cifra">1</span>-ый год: <span class="cifra">3&nbsp;%</span>, далее - <span class="cifra">5&nbsp;%</span></td>
+				<td align="justify"><p>Для пенсионеров с пенсией менее <span class="cifra">20&nbsp;000</span> руб., для малоимущих многодетных семей.</p>
+					<p>Необходимо предоставление справок, подтверждающих данные обстоятельства.</p>
+				</td>
+			</tr>
+			<tr id="ps" onmouseover="pPsvet(this)">
+				<td>Прямо сейчас!</td>
+				<td>от&nbsp;<span class="cifra">1</span>&nbsp;млн. до <span class="cifra">10</span>&nbsp;млн.</td>
+				<td>до <span class="cifra">3</span> лет</td>
+				<td>рубли, доллары США</td>
+				<td><span class="cifra">1</span>-ый год: <span class="cifra">25&nbsp;%</span>, далее - <span class="cifra">49,9&nbsp;%</span></td>
+				<td align="justify"><p>Для солидных людей, не испытывающих финансовых проблем</p>
+				<p>Необходимо предоставление документов, подтверждающих отсутствие финансовых проблем - по форме банка.</p>
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td colspan="5" align="right" class="mik">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+function	 pPsvet(obj){
+	getObj("lc").className = (obj.id == "lc") ? "psvet" : "";
+	getObj("rf").className = (obj.id == "rf") ? "psvet" : "";
+	getObj("zp").className = (obj.id == "zp") ? "psvet" : "";
+	getObj("pd").className = (obj.id == "pd") ? "psvet" : "";
+	getObj("ps").className = (obj.id == "ps") ? "psvet" : "";
+}
+onload = function(){
+	var url = window.location.href, L = url.length;
+	switch(url.substr(L-5,5)){
+		case "?k=lc":	 	pPsvet(getObj("lc"));	break;
+		case "?k=rf":		pPsvet(getObj("rf"));	break;
+		case "?k=zp":	pPsvet(getObj("zp"));	break;
+		case "?k=pd":	pPsvet(getObj("pd"));	break;
+		case "?k=ps":	pPsvet(getObj("ps"));	break;
+	}
+}
+</script>
+</html>

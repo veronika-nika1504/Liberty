@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<title>Банк "Свобода"</title>
+<script src="https://1map.com/js/script-for-user.js?embed_id=362199"></script>
+<script src="js/mefunc.js"></script>
+<style>
+</style>
+</head>
+<body>
+<table width="85%" align="center" height="99%">
+	<tr>
+		<td width="23%" align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo1" src="img/Лого5.png" /><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td width="16%"><div id="cred" class="mnu" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td width="23%" align="center"><div id="vklad" class="mnu" onclick="MnuClick(this)">Вклады</div></td>
+		<td width="23%" align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td width="15%"align="right" valign="top"><div id="geo" onclick="MnuClick(this)"><img id="geoy" src="img/geo-y.png"  /></div>	</td>
+	</tr>
+	<tr><td colspan="5" align="center">
+		<img id="mapimg" src="img/map0.jpg" style="opacity:0" width="88%" />
+		<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3"><div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+		<a href="https://1map.com/ru/map-embed" style="display:none">1 Map</a>
+		</div>
+	</td></tr>
+	<tr><td colspan="5" align="right" class="mik">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+onload = function(){
+	var	h, w;
+	with(getObj("mapimg")){
+		h = offsetHeight;	w = offsetWidth;
+		if(typeof OneMap == "undefined")	
+			style.opacity = 1;
+		else{
+			style.display="none";
+			ViewMap(h, w);
+		}
+	}
+}
+function	 ViewMap(h, w){
+	var setting = {
+		"height": h,
+		"width": w,
+		"zoom": 15,
+		"queryString": "ул. Ленина, 86, Воронеж, Россия",
+		"place_id":	"ChIJ_Qqr1hMvO0ERO6SEf5BFktM",
+		"satellite":	false,
+		"centerCoord":	[51.68656527009828,39.216672849999995],
+		"cid":	 "0xd39245907f84a43b",
+		"lang":	"ru",
+		"cityUrl":	"/russia/voronezh-11237",
+		"cityAnchorText":	"Карта [CITY1], Central Federal District, Россия",
+		"id":	"map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+		"embed_id":	"362199"		
+	};
+	OneMap.initMap(setting);
+}
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<title>Банк "Свобода"</title>
+<script src="js/mefunc.js"></script>
+</head>
+<body>
+<table width="85%" align="center">
+	<tr>
+		<td width="23%" align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo1" src="img/Лого5.png" /><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td width="16%"><div id="cred" class="mnu" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td width="23%" align="center"><div id="vklad" class="mnu" style="color:yellow" onclick="MnuClick(this)">Вклады</div></td>
+		<td width="23%" align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td width="15%"align="right" valign="top"><div id="geo" onclick="MnuClick(this)"><img id="geob" src="img/geo-b.png" /><img id="geoy" src="img/geo-y.png"  /></div></td>
+	</tr>
+	<tr><td colspan="5" class="rek" style="color:yellow; font-size:38pt;" align="center">Предложения по вкладам</td></tr>
+	<tr><td  colspan="5">
+		<table id="opis" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>Наименование вклада</th>
+				<th width="100">Cтавка</th>
+				<th>Сумма вклада</th>
+				<th>Срок вклада</th>
+				<th>Валюта вклада</th>
+				<th>Описание</th>
+			</tr>
+			<tr id="sv" onmouseover="pPsvet(this)">
+				<td>Свобода</td>
+				<td>до <span class="cifra">6,4 %</span></td>
+				<td>от <span class="cifra">10&nbsp;000</span></td>
+				<td>от <span class="cifra">3</span> месяцев до <span class="cifra">3</span> лет</td>
+				<td>рубли</td>
+				<td></td>
+			</tr>
+			<tr id="ar" onmouseover="pPsvet(this)">
+				<td>Активный&nbsp;рост</td>
+				<td>до <span class="cifra">7 %</span></td>
+				<td>от <span class="cifra">50&nbsp;000</span></td>
+				<td>от <span class="cifra">3</span> месяцев</td>
+				<td>рубли, доллары США</td>
+				<td align="justify"><p>Можете вкладывать каждый день, но снять лишь раз в полгода. Будьте внимательны.</p></td>
+			</tr>
+			<tr id="na" onmouseover="pPsvet(this)">
+				<td>Накопительный</td>
+				<td><span class="cifra">1</span>&#8209;ый&nbsp;неполный  месяц: <span class="cifra">1&#8209;1,5&nbsp;%</span>
+<br><span class="cifra">1&#8209;2</span>&nbsp;месяцы:&nbsp;<span class="cifra">2&#8209;2,5%</span>
+<br><span class="cifra">3&#8209;5</span>&nbsp;месяцы:&nbsp;<span class="cifra">3&#8209;3,5%</span>
+<br><span class="cifra">6&#8209;11</span>&nbsp;месяцы:&nbsp;<span class="cifra">4&#8209;4,5%</span>
+<br>c&nbsp;<span class="cifra">12</span>&nbsp;месяца:&nbsp;<span class="cifra">7&#8209;8%</span>
+				</td>
+				<td>от <span class="cifra">10&nbsp;000</span></td>
+				<td>от <span class="cifra">3</span> месяцев до <span class="cifra">3</span> лет</td>
+				<td>рубли</td>
+				<td align="justify"><p>Свобода действий: снимайте и пополняйте счет в любое время и на любую сумму. Выгодно при долгосрочном размещении. Предновогодний бонус и на день рождение в виде изменения текущего процента на <span class="cifra">10%</span> (будет увеличена та сумма которая пролежала на счету не менее <span class="cifra">31</span>дня).</p></td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td colspan="5" align="right" class="mik" height="100">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+function	 pPsvet(obj){
+	getObj("sv").className = (obj.id == "sv") ? "psvet" : "";
+	getObj("ar").className = (obj.id == "ar") ? "psvet" : "";
+	getObj("na").className = (obj.id == "na") ? "psvet" : "";
+}
+onload = function(){
+	var url = window.location.href, L = url.length;
+	switch(url.substr(L-5,5)){
+		case "?v=sv":	pPsvet(getObj("sv"));	break;
+		case "?v=ar":		pPsvet(getObj("ar"));	break;
+		case "?v=na":	pPsvet(getObj("na"));	break;
+	}
+}
+</script>
+</html>

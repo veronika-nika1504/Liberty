@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<title>Банк "Свобода"</title>
+<style>
+	.rek { font: normal normal 22pt Gabriola; color:#60A6EF; line-height:0.9; padding-right:8% }
+</style>
+<script src="js/mefunc.js"></script>
+</head>
+<body>
+<table width="85%" align="center">
+	<tr>
+		<td width="23%" align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td width="16%"><div id="cred" class="mnu" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td width="23%" align="center"><div id="vklad" class="mnu" onclick="MnuClick(this)">Вклады</div></td>
+		<td width="23%" align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td width="15%"align="right" valign="top"><div id="geo" onclick="MnuClick(this)"><img id="geob" src="img/geo-b.png" /><img id="geoy" src="img/geo-y.png"  /></div>	</td>
+	</tr>
+	<tr>
+		<td colspan="5" align="center" onclick="Live()">
+				<img id="Lenta1" src="img/Lenta1.png" style="width:85%" />
+				<img id="Lenta2" src="img/Lenta2.png" style="width:85%; display:none" />
+		</td>
+	</tr>
+	<tr style="font-size:6px"><td colspan="5">&nbsp;</td></tr>
+	<tr><td rowspan="2"><img src="img/Карта.png" style="width:90%" /></td>
+		<td colspan="4" align="justify" class="rek">Оформите личную карту, благодаря ей Вы сможете не только облегчить свой кошелёк, 
+		но и чётко рассчитывать свой бюджет, при том, что денег у Вас будет только больше.
+		</td>
+	</tr>
+	<tr><td colspan="4" align="right" class="rek"><font size="+2">До 5 апреля оформи бесплатно</font></td></tr>
+	<tr><td colspan="5" align="right" class="mik">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+function	 Live(){
+	if(window.TMR){
+		var o1 = getObj("Lenta1").style, o2 =  getObj("Lenta2").style;
+		if(o1.display=="none"){ o2.display="none";	o1.display = "block"; }
+		else{ o1.display="none";	o2.display = "block"; }
+	}
+	window.TMR = setTimeout(Live,10000);
+}
+window.onload = function(){	Live();	}
+window.onunload=function(){	clearTimeout(window.TMR);	 }
+</script>
+</html>

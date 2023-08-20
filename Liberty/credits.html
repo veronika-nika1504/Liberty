@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/polz.css">
+<title>Банк "Свобода"</title>
+<style>
+</style>
+<script src="js/mefunc.js"></script>
+</head>
+<body>
+<table width="85%" align="center">
+	<tr>
+		<td colspan="2" align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo1" src="img/Лого5.png" /><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td><div id="cred" class="mnu" style="color:yellow" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td colspan="2" align="center"><div id="vklad" class="mnu" onclick="MnuClick(this)">Вклады</div></td>
+		<td align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td colspan="2" align="right" valign="top"><div id="geo" onclick="MnuClick(this)"><img id="geob" src="img/geo-b.png" /><img id="geoy" src="img/geo-y.png"  /></div>	</td>
+	</tr>
+	<tr>
+		<td class="skip" width="10%">&nbsp;</td><!--	 1) logo	1	-->
+		<td class="skip" width="13%">&nbsp;</td><!--	 2) logo	2	-->
+		<td class="skip" width="16%">&nbsp;</td><!--	 3) Кредиты	-->
+		<td class="skip" width="16%">&nbsp;</td><!--	 4) Вклады1 -->
+		<td class="skip" width="7%">&nbsp;</td><!--	 5) Вклады2 -->
+		<td class="skip" width="23%">&nbsp;</td><!--	 6) Поддержка	 -->
+		<td class="skip" width="9%">&nbsp;</td><!--	 7) geo1	-->
+		<td class="skip" width="6%">&nbsp;</td><!--	 8) geo2	-->
+	</tr>
+	<tr>
+		<td colspan="4" class="rek" align="center">Расчет кредита</td>
+		<td></td>
+		<td colspan="3" class="rek" align="center">Выгодное<br>предложение</td>
+	</tr>
+	<tr><td colspan="8" class="skip">&nbsp;</td></tr>
+	<tr>
+		<td class="sve">Сумма</td>
+		<td colspan="2"><div class="slidecontainer"><input type="range" min="1000" max="10000000" value="1000" class="slider" id="skred"></div></td>
+		<td><input type="text" id="kred" title="Прдполагаемая сумма кредита, если желаете в долларах США - укажите в конце знак $" onchange="with(this)value=NumPositiveStrSpace(value);xChange();" tabindex="1" value="1 000 Р"/></td>
+		<td colspan="2" class="mel" align="center">Ежемесячный<br>платеж</td>
+		<td colspan="2" class="mel" align="center">Процентная<br>ставка</td>
+	</tr>
+	<tr>
+		<td class="sve">Срок</td>
+		<td colspan="2"><div class="slidecontainer"><input type="range" min="1" max="120" value="1" class="slider" id="smes"></div></td>
+		<td><input type="text" id="mes" title="Вводите число месяцев погашения кредита" onchange="with(this)value=MesLet(value,true);xChange();"
+			onfocus="with(this)value=MesLet(value)" onclick="with(this)value=MesLet(value);" onblur="with(this)value=MesLet(value,true);" tabindex="2" value="1 мес."/>
+		</td>
+		<td id="plat1" colspan="2" class="cifr" align="center" valign="bottom"></td>
+		<td id="stav1" colspan="2" class="cifr" align="center" valign="bottom"></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="mel" align="center"><br>Подходящее отметьте галочкой</td>
+		<td></td>
+		<td colspan="3" class="mik bb" align="center" valign="top"><div style="opacity:0.5">На первый год</div></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2" class="mel pad"><label for="Kpens">Пенсионер / Многодетный</label></td>
+		<td><input id="Kpens" type="checkbox" onchange="xChange();" tabindex="3" /></td>
+		<td id="plat" colspan="2" class="cifr" align="center"></td>
+		<td id="stav" colspan="2" class="cifr" align="center"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2" class="mel pad"><label for="Krefi"><br>Рефинансирование</label></td>
+		<td><input id="Krefi" type="checkbox" onchange="xChange();" tabindex="4" /></td>
+		<td></td>
+		<td rowspan="2" colspan="3" align="center" class="bt mik" valign="bottom">
+			<button onclick="bClick(this);" tabindex="7">&#8220;<span id="Kname"></span>&#8221;</button>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2" class="mel pad"><label for="Kzarp"><br>Зарплата в нашем банке</label></td>
+		<td><input id="Kzarp" type="checkbox" onchange="xChange();" tabindex="5" /></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2" class="mel pad"><label for="Ktoro"><br>Ну очень срочно</label></td>
+		<td><input id="Ktoro" type="checkbox" onchange="xChange();" tabindex="6" /></td>
+		<td></td>
+		<td colspan="3" class="mik" align="center">Предварительный расчет с учетом подключения дополнительных услуг. Не&nbsp;является&nbsp;офертой.</td>
+	</tr>
+	<tr><td colspan="8" class="skip">&nbsp;</td></tr>
+	<tr><td colspan="8" align="center">
+		<button id="all" style="width:35%" onclick="bClick(this);" tabindex="8">Все предложения</button></td>
+	</tr>
+	<tr><td id="msg" colspan="8" class="mel" style="color:red" align="center">&nbsp;</td></tr>
+	<tr><td colspan="8" align="right" class="mik" height="130">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+function		bClick(obj){
+	var url = "list-k.html", s = obj.getElementsByTagName("span");
+	if(s.length==1){
+		switch(s[0].innerHTML){
+			case "Поддержка":
+				url += "?k=pd";	break;
+			case "Зарплатник":
+				url += "?k=zp";	break;
+			case "Рефинансирование":
+				url += "?k=rf";	break;
+			case "Прямо сейчас!":
+				url += "?k=ps";	break;
+			case "Любые цели":
+				url += "?k=lc";	break;				
+		}
+	}
+	window.location.href = url;
+}
+
+function	 Plata (sKred, nMes, Stav){
+	var j, p=0, s = sKred;
+	for(j = 1; j <= nMes; j++){
+		p += (s * Stav / 12);
+		s -= s / nMes;
+	}
+	if(!nMes)	nMes = 1;
+	return Math.round((sKred+p)/nMes);
+}
+
+function	 xChange(){
+	var bx = "", kred = getObj("kred").value.replace(/ /g,'') || '0', L = kred.length,
+		mes = MesLet(getObj("mes").value) || '0',
+		Kpens = getObj("Kpens").checked,	Krefi = getObj("Krefi").checked, Kzarp = getObj("Kzarp").checked, Ktoro = getObj("Ktoro").checked,
+		kn = getObj("Kname"), plat1 = getObj("plat1"), stav1 = getObj("stav1"), plat = getObj("plat"), stav = getObj("stav"), msg = getObj("msg");
+
+	if(L){
+		switch(kred.substr(L-1,1)){
+			case '$':	bx = " $"; break;
+			case 'Р':	bx = " Р"; break;
+		}
+		if(bx){
+			kred = kred.substr(0,L-1);	if(!kred) kred = '0';
+		}else
+			bx = ' Р';
+	}
+	kred = parseInt(kred);
+	mes = parseInt(mes);
+	var p;
+//	alert("kred = "+ kred + "\nmes = " + mes + "\nKpens = " + Kpens + "\nKrefi = " + Krefi + "\nKzarp = " + Kzarp + "\nKtoro = " + Ktoro);
+	if(Kpens && (kred <= 500000) && (mes <= 60) && (bx != " $")){
+		kn.innerHTML = "Поддержка";
+		stav1.innerHTML = "3 %";	//первый год
+		stav.innerHTML = "5 %";
+		msg.innerHTML = "";
+		p = Plata (kred, mes, 0.03);
+		plat1.innerHTML = NumPositiveStrSpace(p +bx);
+		p = Plata (kred, mes, 0.05);
+		plat.innerHTML = NumPositiveStrSpace(p +bx);
+	}else if(Kzarp && (kred <= 5000000) && (mes <= 60)){
+		kn.innerHTML = "Зарплатник";
+		stav1.innerHTML = "5,45 %";
+		stav.innerHTML = "5,45 %";
+		msg.innerHTML = "";
+		p = Plata (kred, mes, 5.45);
+		plat1.innerHTML = NumPositiveStrSpace(p +bx);
+		plat.innerHTML = NumPositiveStrSpace(p +bx);
+	}else if(Krefi && (kred <= 5000000) && (mes <= 60)){
+		kn.innerHTML = "Рефинансирование";
+		stav1.innerHTML = "5,5 %";
+		stav.innerHTML = "10,2 %";
+		msg.innerHTML = "";
+		p = Plata (kred, mes, 0.055);
+		plat1.innerHTML = NumPositiveStrSpace(p +bx);
+		p = Plata (kred, mes, 0.102);
+		plat.innerHTML = NumPositiveStrSpace(p +bx);
+	}else if(Ktoro && (1000000 <= kred) && (kred <= 10000000) && (mes <= 36)){
+		kn.innerHTML = "Прямо сейчас!";
+		stav1.innerHTML = "25 %";
+		stav.innerHTML = "49,9 %";
+		msg.innerHTML = "";
+		p = Plata (kred, mes, 0.25);
+		plat1.innerHTML = NumPositiveStrSpace(p +bx);
+		p = Plata (kred, mes, 0.499);
+		plat.innerHTML = NumPositiveStrSpace(p +bx);
+	}else if((kred <= 5000000) && (mes <= 120)){
+		kn.innerHTML = "Любые цели";
+		stav1.innerHTML = "8,1 %";
+		stav.innerHTML = "20,8 %";
+		msg.innerHTML = "";
+		p = Plata (kred, mes, 0.081);
+		plat1.innerHTML = NumPositiveStrSpace(p +bx);
+		p = Plata (kred, mes, 0.208);
+		plat.innerHTML = NumPositiveStrSpace(p +bx);
+	}else{
+		kn.innerHTML = "";
+		stav1.innerHTML = "";
+		stav.innerHTML = "";
+		plat1.innerHTML = "";
+		plat.innerHTML = "";
+		msg.innerHTML = "Такой кредит в нашем банке не предусмотрен, измените Ваш выбор, просмотрите наши предложения по кнопке выше.";		
+	}
+}
+
+var sliderK = getObj("skred"), outK = getObj("kred");
+sliderK.oninput = function(){	outK.value = NumPositiveStrSpace(this.value);	}
+sliderK.onchange = xChange;
+
+var sliderM = getObj("smes"), outM = getObj("mes");
+sliderM.oninput = function(){	outM.value = MesLet(this.value, 1);	}
+sliderM.onchange = xChange;
+</script>
+</html>

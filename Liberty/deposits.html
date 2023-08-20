@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="ru" />
+<meta name="description" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="keywords" content="Банк Свобода: кредиты, вклады, поддержка, льготы" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<title>Банк "Свобода"</title>
+<script src="js/mefunc.js"></script>
+<style>
+	.TX { transform:translateX(20%) }
+</style>
+</head>
+<body>
+<table width="85%" align="center">
+	<tr>
+		<td align="left" valign="top" height="110">
+			<div id="logo" onclick="MnuClick(this)"><img id="logo1" src="img/Лого5.png" /><img id="logo2" src="img/LogoY.png" />
+		</td>
+		<td><div id="cred" class="mnu" onclick="MnuClick(this)">Кредиты</div></a></td>
+		<td colspan="2" align="center"><div id="vklad" class="mnu" style="color:yellow" onclick="MnuClick(this)">Вклады</div></td>
+		<td align="center"><div id="supp" class="mnu" onclick="MnuClick(this)">Поддержка</div></td>
+		<td colspan="2" align="right" valign="top"><div id="geo" onclick="MnuClick(this)"><img id="geob" src="img/geo-b.png" /><img id="geoy" src="img/geo-y.png"  /></div>	</td>
+	</tr>
+	<tr>
+		<td class="skip" width="23%">&nbsp;</td><!--	 1) logo	-->
+		<td class="skip" width="16%">&nbsp;</td><!--	 2) Кредиты	-->
+		<td class="skip" width="16%">&nbsp;</td><!--	 3) Вклады1 -->
+		<td class="skip" width="7%">&nbsp;</td><!--	 4) Вклады2 -->
+		<td class="skip" width="23%">&nbsp;</td><!--	 5) Поддержка	 -->
+		<td class="skip" width="9%">&nbsp;</td><!--	 6) geo1	-->
+		<td class="skip" width="6%">&nbsp;</td><!--	 7) geo2	-->
+	</tr>
+	<tr>
+		<td colspan="3" class="rek"><div style="transform: translateX(-5%)">Расчет вклада</div></td>
+		<td colspan="3" class="rek">Выгодное<br>предложение</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr><td colspan="7" class="skip">&nbsp;</td></tr>
+	<tr>
+		<td colspan="2" align="center" class="pad">
+			<input type="text" id="vnes"title="Сумма внесения вклада, если в долларах США - поставьте в конце знак $" onchange="with(this)value=NumPositiveStrSpace(value);xChange();" tabindex="1" />
+		</td>
+		<td class="sve">Сумма</td>
+		<td colspan="3" class="sve" align="center">Ставка</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" class="pad">
+			<input type="text" id="mes" title="Вводите число месяцев срока вклада" onchange="with(this)value=MesLet(value,true);xChange();"
+			onfocus="with(this)value=MesLet(value)" onclick="with(this)value=MesLet(value);" onblur="with(this)value=MesLet(value,true);" tabindex="2" />
+		</td>
+		<td class="sve">Срок</td>
+		<td id="stav" colspan="3" class="cifr bb" align="center"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3" align="center" class="mel"><div style="transform: translateX(-5%)"><br>Желаемое отметьте галочкой:</div></td>
+		<td colspan="3" class="sve" align="center"><br>Сумма вклада<br>с процентами</td>
+		<td></td>
+	</tr>
+	<tr><td colspan="7" class="skip">&nbsp;</td></tr>
+	<tr>
+		<td colspan="2" class="mel"><div class="TX"><label for="Vsnim">Снимать</label></div></td>
+		<td><input id="Vsnim" type="checkbox" onchange="xChange();" tabindex="3" /></td>
+		<td id="itog" colspan="3" class="cifr bb" align="center"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="2" class="mel"><div class="TX"><label for="Vvkla">Вкладывать</label></div></td>
+		<td><input id="Vvkla" type="checkbox" onchange="xChange();" tabindex="4" /></td>
+		<td rowspan="2" colspan="3" align="center" class="bb">
+			<button onclick="bClick(this);" tabindex="6">&#8220;<span id="Vname"></span>&#8221;</button>
+		</td>
+		<td rowspan="2"></td>
+	</tr>
+	<tr>
+		<td colspan="2" class="mel"><div class="TX"><label for="Vnako">Накапливать</label></div></td>
+		<td><input id="Vnako" type="checkbox" onchange="xChange();" tabindex="5" /></td>
+	</tr>
+	<tr>
+		<td colspan="3"></td>
+		<td colspan="3" class="mik" align="center">Предварительный расчет с учетом подключения дополнительных услуг.<br>Не является офертой</td>
+		<td></td>
+	</tr>
+	<tr><td colspan="7" class="skip"><br><br>&nbsp;</td></tr>
+	<tr><td colspan="7" align="center">
+		<button style="width:35%" onclick="bClick(this);" tabindex="7">Все предложения</button></td>
+	</tr>
+	<tr><td colspan="7" align="right" class="mik" height="130">Автор: Запара Вероника Вадимовна, 4ПМ</td></tr>
+</table>
+</body>
+<script>
+function		bClick(obj){
+	var url = "list-v.html", s = obj.getElementsByTagName("span");
+	if(s.length==1){
+		switch(s[0].innerHTML){
+			case "Свобода":
+				url += "?v=sv";	break;
+			case "Активный рост":
+				url += "?v=ar";	break;
+			case "Накопительный":
+				url += "?v=na";	break;
+		}
+	}
+	window.location.href = url;
+}
+function	 xChange(){
+	var bx = "", vnes = getObj("vnes").value.replace(/ /g,'') || '0', L = vnes.length,
+		mes = MesLet(getObj("mes").value) || '0',
+		Vsnim = getObj("Vsnim").checked,	Vvkla = getObj("Vvkla").checked, Vnako = getObj("Vnako").checked,
+		kn = getObj("Vname"), stav = getObj("stav"), itog = getObj("itog");
+	if(L){
+		switch(vnes.substr(L-1,1)){
+			case '$':	bx = " $"; break;
+			case 'Р':	bx = " Р"; break;
+		}
+		if(bx){
+			vnes = vnes.substr(0,L-1);	if(!vnes) vnes = '0';
+		}else
+			bx = ' Р';
+	}
+	vnes = parseInt(vnes);
+	mes = parseInt(mes);
+	if((vnes >= 10000) && (3 <= mes) && (mes <= 36) && !Vnako && (bx!=' $')){
+		kn.innerHTML = "Свобода";		stav.innerHTML = "6,4 %";		itog.innerHTML = NumPositiveStrSpace( vnes + Math.round( vnes * 0.064 / 12 * mes) + bx);
+	}else if((vnes >= 50000) && (mes >= 3) && !Vsnim && !Vnako){
+		kn.innerHTML = "Активный рост";	stav.innerHTML = "7 %";	itog.innerHTML = NumPositiveStrSpace( vnes + Math.round( vnes * 0.07 / 12 * mes) + bx);
+	}else{
+		kn.innerHTML = "Накопительный";
+		var SP = 0, m, st = 0;
+		for(m=1; m <= 12 && m <= mes; m++){
+			switch(m){
+				case 1:	case 2:
+					st = 0.025;	break;
+				case 3:	case 4:	case 5:
+					st = 0.035;	break;
+				case 12:
+					st = 0.08;		break;
+				default:
+					st = 0.045
+			}
+			SP += vnes * st / 12;
+		} //for
+		for(m=13; m <= mes; m++){
+			if( m % 12 == 1 ){
+				vnes = Math.round( vnes + SP );
+				SP = 0;
+			}
+			SP += vnes * st / 12;
+		}
+		vnes = Math.round( vnes + SP );
+		st = Math.round(st * 1000) / 10;
+		if(st)	st = " - "+st.toString().replace('.',',');
+		else st = "";
+		stav.innerHTML = "2"+st+" %";	itog.innerHTML = NumPositiveStrSpace(vnes+bx);
+	}
+}
+</script>
+</html>

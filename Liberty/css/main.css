@@ -1,0 +1,34 @@
+	/* Автор: Запара Вероника Вадимовна, 4ПМ */
+	.mnu { font: normal 800 28pt Gabriola; color:#60A6EF; cursor:pointer }
+	.mnu:hover { color:yellow }
+	#geo { position:relative; height:50px; text-align:center; cursor:pointer}
+	#geob, #geoy { position:absolute; top:0px; }
+	#geob { z-index:2 }
+	#geob:hover { display:none }
+
+	#logo { position:relative; text-align:left; cursor:pointer}
+	#logo1, #logo2 { position:absolute; top:0px; width:110px}
+	#logo1 { z-index:2 }
+	#logo1:hover { display:none;}
+
+	.rek	{ font: normal normal 28pt Gabriola; color:#60A6EF; line-height:0.7; text-align:center }
+	.pad	{ padding-right: 10%}
+	.sve	{ font: normal normal 22pt Gabriola; color:#60A6EF; line-height:0.7; }
+	.mel	{ font: normal normal 18pt Gabriola; color:#60A6EF; line-height:0.7; }
+	.mik	{ font: normal normal 12pt Gabriola; color:#60A6EF; line-height:0.7; }
+	.cifr	{  font: normal normal 16pt "Times New Roman"; color:#60A6EF; }
+	.bb	{ border-bottom: solid 1px #60A6EF; }
+	.bt	{ border-top: solid 1px #60A6EF; }
+	input { font: normal normal 16pt "Times New Roman"; color:#60A6EF; line-height:0.7; text-align:center; width:150px; height: 20px; border-color: #60A6EF; border-radius:20px 0 20px 0;}
+	input[type="checkbox"] { width: 15px; border: 2px solid #60A6EF; border-radius: 0 0 0 0;}
+	.skip { font-size: 6px}
+	button { font: normal normal 28pt Gabriola; background-color:#60A6EF; color:white; line-height:0.7; border-radius: 20px; width: 90%; height:28pt; max-width:300px; cursor: pointer;}
+
+	.cifra	{  font: normal normal 14pt "Times New Roman"; color:#60A6EF; }
+	#opis th, #opis td { border-right: solid 1px #DCDCDC; border-top: solid 1px #DCDCDC; padding: 3px 5px 0 5px; 
+								font: normal normal 20pt Gabriola; color:#60A6EF; line-height:0.8;	}
+	#opis th:nth-child(1), #opis td:nth-child(1)	{ border-left: solid 1px #DCDCDC; font-weight: bold; text-align: center}
+	#opis tr:last-child td	{ border-bottom: solid 1px #DCDCDC; }
+	#opis th	{ font-weight: bold; }
+	.psvet { background-color: yellow; }
+	p	{	text-indent: 30pt; margin-top: 1pt; margin-bottom: 1pt; }
